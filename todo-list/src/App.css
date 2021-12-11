@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+  background-color:#161616;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
+header {
+  font-size: 20px;
+  height: 100px;
+}
+
+header, form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  border-bottom: 1px solid white;
+  padding-bottom: 10px;
+}
+
+form input {
+  background: white;
+  border: none;
+  outline:none;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  height: 40px;
+  width: 350px;
+  font-size: 20px;
+  padding: 0 15px;
+  font-weight: 700;
+}
+
+form button {
+  background-color: white;
+  color: tomato;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+  padding: 0 15px 0 0;
+  border: none;
+  height: 40px;
+  font-weight: 700;
+}
+
+select {
+  outline: none;
+  color: tomato;
+  cursor: pointer;
+  font-weight: 700;
+  height: 40px;
+  width: 180px;
+  border-radius: 50px;
+  padding: 0 15px;
+}
+ 
+.select {
+  margin-left: 20px;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+  
+.todo-list {
+  width: 600px;
+  list-style: none;
+}
+  
+.todo {
+  margin: 0.5rem;
+  background: white;
+  font-size: 1.5rem;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 1s ease;
+}
+
+.todo li {
+  flex: 1;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+  
+.trash-btn, .complete-btn {
+  background: royalblue;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.complete-btn {
+  background: rgb(11, 212, 162);
+}
+
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+  
+.fa-trash, .fa-check {
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .fall {
+    transform: translateY(10rem) rotateZ(20deg);
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
+  
+  
